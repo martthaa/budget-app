@@ -1,3 +1,5 @@
+## This app was made while I was taking awesome React course by Maksym Rudnyi.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
