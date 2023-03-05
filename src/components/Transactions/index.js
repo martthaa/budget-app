@@ -1,51 +1,55 @@
-// import Transaction from "../Transaction";
-// import PropTypes from 'prop-types'
+import { FixedSizeList as List } from "react-window";
+import AutoSizer from "react-virtualized-auto-sizer";
+import InfiniteLoader from "react-window-infinite-loader";
 
-// const Transactions = (transactions) => (
-//   <div>
-//     {transactions.map((transaction) => (
-//       <Transaction key={transaction.id} transaction={transaction} />
-//     ))}
-//   </div>
+import Transaction from '../Transaction';
 
-// );
+const Transactions = ({data, loadMoreRows, onDelete, onStarClick, isNextPageLoading, hasNextPage}) => {
+    const isItemLoaded = index => !hasNextPage || index < data.length;
+    const loadMoreItems = isNextPageLoading ? () => {} : loadMoreRows;
+    const itemCount = hasNextPage ? data.length + 1 : data.length;
+    
+    return (
+        <div style={{height: 'calc(100vh - 127px)'}}>
+            <AutoSizer>
+                {({ height, width }) => (
+                    <InfiniteLoader
+                        isItemLoaded={isItemLoaded}
+                        itemCount={itemCount}
+                        loadMoreItems={loadMoreItems}
+                    >
+                        {({ onItemsRendered, ref }) => (
+                            <List
+                                className="List"
+                                height={height}
+                                itemCount={itemCount}
+                                itemSize={46}
+                                width={width}
+                                itemData={data}
+                                ref={ref}
+                                onItemsRendered={onItemsRendered}
+                            >
+                                {({index, style, data}) => {
+                                    if (!data[index]) {
+                                        return null
+                                    };
 
-// Transactions.propTypes = {
-//     transactions: PropTypes.array
-// }
-
-// export default Transactions;
-// import PropTypes from 'prop-types';
-// import Transaction from '../Transaction';
-
-// const Transactions = ({ transactions = [] }) => transactions.map((transaction) => <Transaction key={transaction.id} transaction={transaction}/>)
-
-// Transactions.propTypes = {
-//     transactions: PropTypes.array
-// }
-
-// Transactions.defaultProps = {
-//     transactions: []
-// }
-
-// export default Transactions;
-
-import PropTypes from 'prop-types';
-import Transaction from '../Transaction'
-
-const Transactions = ({transactions = []}) => (
-  transactions.map((transaction) => (
-      <Transaction key={transaction.id} transaction={transaction} />
-    ))
-  
-);
-
-Transactions.propTypes = {
-  transactions:PropTypes.array
-}
-
-Transactions.defaultProps = {
-  transactions: []
+                                    return (
+                                        <div style={style}>
+                                            <Transaction key={data[index].id} 
+                                                        transaction={data[index]} 
+                                                        onDelete={onDelete}
+                                                        onStarClick={onStarClick} />
+                                        </div>
+                                    )
+                                }}
+                            </List>
+                        )}
+                    </InfiniteLoader>
+                )}
+            </AutoSizer>
+        </div>
+    )
 }
 
 export default Transactions;

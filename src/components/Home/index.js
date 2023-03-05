@@ -1,73 +1,46 @@
-import { Component } from 'react';
+import { udeState, useEffect, useState, useCallback } from "react";
 
-import Balance from '../Balance';
-import Transactions from '../Transactions';
-import Form from '../Form';
-import ErrorBoundary from '../ErrorBoundary';
+import Balance from "../Balance";
+import Transactions from "../Transactions";
+import ErrorBoundary from "../ErrorBoundary";
+import {ChangeBalance} from '../ChangeBalance';
 
-import { Wrapper } from './styles'
+import { Wrapper } from "./styles";
+import { STATUSES } from "../../constants";
 
-import { getItems, addItem } from '../../utils/indexdb'
+import { useData } from "../../hooks";
+import { addItem } from "../../utils/indexdb";
+import { BalanceData } from "../BalanceData";
 
-class Home extends Component {
-    constructor() {
-        super();
+const Home = () => {
+  //const [balance, setBalance] = useState(0);
 
-        this.state = {
-            balance: 0,
-            transactions: []
-        }
+  const { transactions, hasNextPage, status, pushTransaction, onDelete, onStarClick, loadMoreRows } = useData();
 
-        this.onChange = this.onChange.bind(this);
-        console.log('constructor')
-    }
+  const onChange = (transaction) => {
+    pushTransaction(transaction);
+    //setBalance(balance + Number(transaction.value));
+  };
 
-    componentDidMount() {
-        debugger
-        getItems().then((data) => {
-            debugger
-        }).catch((e)=>{
-            debugger
-        })
-        // getItems().then((transactions) => {
-        //     this.setState({
-        //         transactions
-        //     })
-        // }).catch((e) => {
-        //     debugger
-        // })
-    }
+  
+  return (
+    <ErrorBoundary>
+      <Wrapper>
+        <BalanceData>
+          {(balance)=><Balance balance={balance}/>}
+        </BalanceData>
+        <ChangeBalance onChange={onChange} />
+        <hr />
 
-    onChange = ({value, date, comment}) => {
-        const transaction = {
-            value: +value, 
-            comment,
-            date,
-            id: Date.now()
-        }
-        this.setState((state) => ({
-            balance: state.balance + Number(value),
-            transactions: [
-                transaction,
-            ...state.transactions]
-        }));
+        <Transactions data={transactions} 
+                    isNextPageLoading={status === STATUSES.PENDING}
+                    hasNextPage={hasNextPage}
+                    loadMoreRows={loadMoreRows}
+                    onDelete={onDelete}
+                    onStarClick={onStarClick}/>
+      </Wrapper>
+    </ErrorBoundary>
+  );
+};
 
-        addItem(transaction)
-
-    }
-
-    render() {
-        return (
-            <ErrorBoundary>
-                <Wrapper>
-                    <Balance balance={this.state.balance}/>
-                    <Form onChange={this.onChange}/>
-                    <hr/>
-                    <Transactions transactions={this.state.transactions}/>
-                </Wrapper>
-            </ErrorBoundary>
-          )
-    }
-  }
-
-  export default Home;
+export default Home;

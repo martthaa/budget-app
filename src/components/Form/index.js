@@ -1,56 +1,58 @@
 // export default Form;
-import { Component } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
+import {FormattedMessage} from 'react-intl';
 
 import { Wrapper, Input, Row, Button, Comment } from "./styles";
+import Header from "../Header";
 
-class Form extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      value: "",
+const Form = (props) => {
+  const [form, setForm] = useState({
+    value: "",
       date: new Date().toISOString().substring(0, 10),
       comment: "",
-    };
-  }
-
-  onSubmit = (e) => {
+  })
+  const onSubmit = (e) => {
     e.preventDefault();
 
-    this.props.onChange(this.state);
-    this.setState({
+    props.onChange(form);
+    setForm({
+      ...form,
       value: "",
       comment: "",
     });
+
+    props.onCloseFormModal();
   };
 
-  onChange = (e) => {
+  const onChange = (e) => {
     const { value, name } = e.target;
 
-    this.setState({
+    setForm({
+      ...form,
       [name]: value,
     });
   };
 
-  render() {
+  
     return (
       <Wrapper>
-        <form onSubmit={this.onSubmit}>
+        <FormattedMessage id="hello"/>
+        <form onSubmit={onSubmit}>
           <Row>
             <Input
               name="value"
               type="number"
               placeholder="Сума"
-              value={this.state.value}
-              onChange={this.onChange}
+              value={form.value}
+              onChange={onChange}
             />
 
             <Input
               type="date"
               name="date"
-              value={this.state.date}
-              onChange={this.onChange}
+              value={form.date}
+              onChange={onChange}
             />
           </Row>
 
@@ -58,15 +60,15 @@ class Form extends Component {
             <Button>Зберегти</Button>
             <Comment
               name="comment"
-              value={this.state.comment}
-              onChange={this.onChange}
+              value={form.comment}
+              onChange={onChange}
             />
           </Row>
         </form>
       </Wrapper>
     );
   }
-}
+
 
 Form.propTypes = {
   onChange: PropTypes.func,

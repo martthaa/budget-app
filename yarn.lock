@@ -1403,6 +1403,76 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@formatjs/ecma402-abstract@1.14.3":
+  version "1.14.3"
+  resolved "https://registry.npmjs.org/@formatjs/ecma402-abstract/-/ecma402-abstract-1.14.3.tgz"
+  integrity sha512-SlsbRC/RX+/zg4AApWIFNDdkLtFbkq3LNoZWXZCE/nHVKqoIJyaoQyge/I0Y38vLxowUn9KTtXgusLD91+orbg==
+  dependencies:
+    "@formatjs/intl-localematcher" "0.2.32"
+    tslib "^2.4.0"
+
+"@formatjs/fast-memoize@1.2.8":
+  version "1.2.8"
+  resolved "https://registry.npmjs.org/@formatjs/fast-memoize/-/fast-memoize-1.2.8.tgz"
+  integrity sha512-PemNUObyoIZcqdQ1ixTPugzAzhEj7j6AHIyrq/qR6x5BFTvOQeXHYsVZUqBEFduAIscUaDfou+U+xTqOiunJ3Q==
+  dependencies:
+    tslib "^2.4.0"
+
+"@formatjs/icu-messageformat-parser@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/@formatjs/icu-messageformat-parser/-/icu-messageformat-parser-2.3.0.tgz"
+  integrity sha512-xqtlqYAbfJDF4b6e4O828LBNOWXrFcuYadqAbYORlDRwhyJ2bH+xpUBPldZbzRGUN2mxlZ4Ykhm7jvERtmI8NQ==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/icu-skeleton-parser" "1.3.18"
+    tslib "^2.4.0"
+
+"@formatjs/icu-skeleton-parser@1.3.18":
+  version "1.3.18"
+  resolved "https://registry.npmjs.org/@formatjs/icu-skeleton-parser/-/icu-skeleton-parser-1.3.18.tgz"
+  integrity sha512-ND1ZkZfmLPcHjAH1sVpkpQxA+QYfOX3py3SjKWMUVGDow18gZ0WPqz3F+pJLYQMpS2LnnQ5zYR2jPVYTbRwMpg==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    tslib "^2.4.0"
+
+"@formatjs/intl-displaynames@6.2.6":
+  version "6.2.6"
+  resolved "https://registry.npmjs.org/@formatjs/intl-displaynames/-/intl-displaynames-6.2.6.tgz"
+  integrity sha512-scf5AQTk9EjpvPhboo5sizVOvidTdMOnajv9z+0cejvl7JNl9bl/aMrNBgC72UH+bP3l45usPUKAGskV6sNIrA==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/intl-localematcher" "0.2.32"
+    tslib "^2.4.0"
+
+"@formatjs/intl-listformat@7.1.9":
+  version "7.1.9"
+  resolved "https://registry.npmjs.org/@formatjs/intl-listformat/-/intl-listformat-7.1.9.tgz"
+  integrity sha512-5YikxwRqRXTVWVujhswDOTCq6gs+m9IcNbNZLa6FLtyBStAjEsuE2vAU+lPsbz9ZTST57D5fodjIh2JXT6sMWQ==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/intl-localematcher" "0.2.32"
+    tslib "^2.4.0"
+
+"@formatjs/intl-localematcher@0.2.32":
+  version "0.2.32"
+  resolved "https://registry.npmjs.org/@formatjs/intl-localematcher/-/intl-localematcher-0.2.32.tgz"
+  integrity sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==
+  dependencies:
+    tslib "^2.4.0"
+
+"@formatjs/intl@2.6.7":
+  version "2.6.7"
+  resolved "https://registry.npmjs.org/@formatjs/intl/-/intl-2.6.7.tgz"
+  integrity sha512-9FvEJfUMzlmP5ZBK3EE0928kVsZmD5aeWXg+faP8+mKIvG3c0hkLEXQ2MiUrXQt4rsEzOPbYVtBdthzSM0e2fw==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/fast-memoize" "1.2.8"
+    "@formatjs/icu-messageformat-parser" "2.3.0"
+    "@formatjs/intl-displaynames" "6.2.6"
+    "@formatjs/intl-listformat" "7.1.9"
+    intl-messageformat "10.3.1"
+    tslib "^2.4.0"
+
 "@gar/promisify@^1.0.1":
   version "1.1.3"
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz"
@@ -3217,6 +3287,14 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/hoist-non-react-statics@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/html-minifier-terser@^5.0.0":
   version "5.1.2"
   resolved "https://registry.npmjs.org/@types/html-minifier-terser/-/html-minifier-terser-5.1.2.tgz"
@@ -3378,7 +3456,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@16 || 17 || 18":
   version "18.0.28"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.28.tgz"
   integrity sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==
@@ -7483,6 +7561,11 @@ flat-cache@^3.0.4:
     flatted "^3.1.0"
     rimraf "^3.0.2"
 
+flat@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.npmjs.org/flat/-/flat-5.0.2.tgz"
+  integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
+
 flatted@^3.1.0:
   version "3.2.7"
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.7.tgz"
@@ -8115,7 +8198,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.0.0:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -8474,6 +8557,16 @@ interpret@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/interpret/-/interpret-2.2.0.tgz"
   integrity sha512-Ju0Bz/cEia55xDwUWEa8+olFpCiQoypjnQySseKtmjNrnps3P+xfpUmGr90T7yjlVJmOtybRvPXhKMbHr+fWnw==
+
+intl-messageformat@10.3.1:
+  version "10.3.1"
+  resolved "https://registry.npmjs.org/intl-messageformat/-/intl-messageformat-10.3.1.tgz"
+  integrity sha512-mqHc6arhbogrdImIsEscdjWnJcg2bvg3MiyGXDsTSGmPbbM2KtRUe7oNgDUbkM3HMn4KbyOct2JyJScmwRgGSQ==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/fast-memoize" "1.2.8"
+    "@formatjs/icu-messageformat-parser" "2.3.0"
+    tslib "^2.4.0"
 
 ip@^2.0.0:
   version "2.0.0"
@@ -10176,6 +10269,11 @@ memfs@^3.1.2, memfs@^3.2.2, memfs@^3.4.3:
   integrity sha512-omTM41g3Skpvx5dSYeZIbXKcXoAVc/AoMNwn9TKx++L/gaen/+4TTttmu8ZSch5vfVJ8uJvGbroTsIlslRg6lg==
   dependencies:
     fs-monkey "^1.0.3"
+
+"memoize-one@>=3.1.1 <6":
+  version "5.2.1"
+  resolved "https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz"
+  integrity sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==
 
 memoizerific@^1.11.3:
   version "1.11.3"
@@ -12287,7 +12385,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-"react-dom@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 16.8.0", "react-dom@>= 16.8.6", react-dom@>=16.8:
+"react-dom@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0", "react-dom@^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0-rc", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 16.8.0", "react-dom@>= 16.8.6", react-dom@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -12317,6 +12415,22 @@ react-inspector@^5.1.0:
     "@babel/runtime" "^7.0.0"
     is-dom "^1.0.0"
     prop-types "^15.0.0"
+
+react-intl@^6.2.10:
+  version "6.2.10"
+  resolved "https://registry.npmjs.org/react-intl/-/react-intl-6.2.10.tgz"
+  integrity sha512-l2TpskkFR0OzQnq7ChiJ5ZX23USZSzpKOcaR9MYC4UOHE9bT4kQ5JXXolgkq3tiOlvseEOzUCerlzn886AX9Yg==
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/icu-messageformat-parser" "2.3.0"
+    "@formatjs/intl" "2.6.7"
+    "@formatjs/intl-displaynames" "6.2.6"
+    "@formatjs/intl-listformat" "7.1.9"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    "@types/react" "16 || 17 || 18"
+    hoist-non-react-statics "^3.3.2"
+    intl-messageformat "10.3.1"
+    tslib "^2.4.0"
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -12418,7 +12532,25 @@ react-scripts@>=5.0.0, react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-"react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react@^16.13.1 || ^17.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.4 || ^17.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>= 16.8.0", "react@>= 16.8.6", react@>=16.8:
+react-virtualized-auto-sizer@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.7.tgz"
+  integrity sha512-Mxi6lwOmjwIjC1X4gABXMJcKHsOo0xWl3E3ugOgufB8GJU+MqrtY35aBuvCYv/razQ1Vbp7h1gWJjGjoNN5pmA==
+
+react-window-infinite-loader@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/react-window-infinite-loader/-/react-window-infinite-loader-1.0.8.tgz"
+  integrity sha512-907ZLAiZZfBHuZyiY0V7uiSL4P/rI6UQyCF9wES1cDWTeyNLgGLaxu+BZkcUW3R5tSCQcbCcWBl0jVIpYzrKGQ==
+
+react-window@^1.8.8:
+  version "1.8.8"
+  resolved "https://registry.npmjs.org/react-window/-/react-window-1.8.8.tgz"
+  integrity sha512-D4IiBeRtGXziZ1n0XklnFGu7h9gU684zepqyKzgPNzrsrk7xOCxni+TCckjg2Nr/DiaEEGVVmnhYSlT2rB47dQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    memoize-one ">=3.1.1 <6"
+
+"react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0", "react@^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0-rc", "react@^16.13.1 || ^17.0.0", "react@^16.6.0 || 17 || 18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.4 || ^17.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>= 16.8.0", "react@>= 16.8.6", react@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -14320,7 +14452,7 @@ tslib@^1.9.3:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3:
+tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.4.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.5.0.tgz"
   integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
@@ -14410,7 +14542,7 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-"typescript@^3.2.1 || ^4", "typescript@>= 2.7", "typescript@>= 3.x", "typescript@>= 4.3.x", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
+"typescript@^3.2.1 || ^4", typescript@^4.7, "typescript@>= 2.7", "typescript@>= 3.x", "typescript@>= 4.3.x", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
   version "4.9.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
@@ -15197,6 +15329,13 @@ wordwrap@^1.0.0:
   resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz"
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
+workbox-background-sync@^5.1.3, workbox-background-sync@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-background-sync/-/workbox-background-sync-5.1.4.tgz"
+  integrity sha512-AH6x5pYq4vwQvfRDWH+vfOePfPIYQ00nCEB7dJRU1e0n9+9HMRyvI63FlDvtFT2AvXVRsXvUt7DNMEToyJLpSA==
+  dependencies:
+    workbox-core "^5.1.4"
+
 workbox-background-sync@6.5.4:
   version "6.5.4"
   resolved "https://registry.npmjs.org/workbox-background-sync/-/workbox-background-sync-6.5.4.tgz"
@@ -15204,6 +15343,13 @@ workbox-background-sync@6.5.4:
   dependencies:
     idb "^7.0.1"
     workbox-core "6.5.4"
+
+workbox-broadcast-update@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-broadcast-update/-/workbox-broadcast-update-5.1.4.tgz"
+  integrity sha512-HTyTWkqXvHRuqY73XrwvXPud/FN6x3ROzkfFPsRjtw/kGZuZkPzfeH531qdUGfhtwjmtO/ZzXcWErqVzJNdXaA==
+  dependencies:
+    workbox-core "^5.1.4"
 
 workbox-broadcast-update@6.5.4:
   version "6.5.4"
@@ -15255,6 +15401,13 @@ workbox-build@6.5.4:
     workbox-sw "6.5.4"
     workbox-window "6.5.4"
 
+workbox-cacheable-response@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-cacheable-response/-/workbox-cacheable-response-5.1.4.tgz"
+  integrity sha512-0bfvMZs0Of1S5cdswfQK0BXt6ulU5kVD4lwer2CeI+03czHprXR3V4Y8lPTooamn7eHP8Iywi5QjyAMjw0qauA==
+  dependencies:
+    workbox-core "^5.1.4"
+
 workbox-cacheable-response@6.5.4:
   version "6.5.4"
   resolved "https://registry.npmjs.org/workbox-cacheable-response/-/workbox-cacheable-response-6.5.4.tgz"
@@ -15262,10 +15415,22 @@ workbox-cacheable-response@6.5.4:
   dependencies:
     workbox-core "6.5.4"
 
+workbox-core@^5.1.3, workbox-core@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-core/-/workbox-core-5.1.4.tgz"
+  integrity sha512-+4iRQan/1D8I81nR2L5vcbaaFskZC2CL17TLbvWVzQ4qiF/ytOGF6XeV54pVxAvKUtkLANhk8TyIUMtiMw2oDg==
+
 workbox-core@6.5.4:
   version "6.5.4"
   resolved "https://registry.npmjs.org/workbox-core/-/workbox-core-6.5.4.tgz"
   integrity sha512-OXYb+m9wZm8GrORlV2vBbE5EC1FKu71GGp0H4rjmxmF4/HLbMCoTFws87M3dFwgpmg0v00K++PImpNQ6J5NQ6Q==
+
+workbox-expiration@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-expiration/-/workbox-expiration-5.1.4.tgz"
+  integrity sha512-oDO/5iC65h2Eq7jctAv858W2+CeRW5e0jZBMNRXpzp0ZPvuT6GblUiHnAsC5W5lANs1QS9atVOm4ifrBiYY7AQ==
+  dependencies:
+    workbox-core "^5.1.4"
 
 workbox-expiration@6.5.4:
   version "6.5.4"
@@ -15274,6 +15439,16 @@ workbox-expiration@6.5.4:
   dependencies:
     idb "^7.0.1"
     workbox-core "6.5.4"
+
+workbox-google-analytics@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-google-analytics/-/workbox-google-analytics-5.1.4.tgz"
+  integrity sha512-0IFhKoEVrreHpKgcOoddV+oIaVXBFKXUzJVBI+nb0bxmcwYuZMdteBTp8AEDJacENtc9xbR0wa9RDCnYsCDLjA==
+  dependencies:
+    workbox-background-sync "^5.1.4"
+    workbox-core "^5.1.4"
+    workbox-routing "^5.1.4"
+    workbox-strategies "^5.1.4"
 
 workbox-google-analytics@6.5.4:
   version "6.5.4"
@@ -15285,12 +15460,26 @@ workbox-google-analytics@6.5.4:
     workbox-routing "6.5.4"
     workbox-strategies "6.5.4"
 
+workbox-navigation-preload@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-navigation-preload/-/workbox-navigation-preload-5.1.4.tgz"
+  integrity sha512-Wf03osvK0wTflAfKXba//QmWC5BIaIZARU03JIhAEO2wSB2BDROWI8Q/zmianf54kdV7e1eLaIEZhth4K4MyfQ==
+  dependencies:
+    workbox-core "^5.1.4"
+
 workbox-navigation-preload@6.5.4:
   version "6.5.4"
   resolved "https://registry.npmjs.org/workbox-navigation-preload/-/workbox-navigation-preload-6.5.4.tgz"
   integrity sha512-IIwf80eO3cr8h6XSQJF+Hxj26rg2RPFVUmJLUlM0+A2GzB4HFbQyKkrgD5y2d84g2IbJzP4B4j5dPBRzamHrng==
   dependencies:
     workbox-core "6.5.4"
+
+workbox-precaching@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-precaching/-/workbox-precaching-5.1.4.tgz"
+  integrity sha512-gCIFrBXmVQLFwvAzuGLCmkUYGVhBb7D1k/IL7pUJUO5xacjLcFUaLnnsoVepBGAiKw34HU1y/YuqvTKim9qAZA==
+  dependencies:
+    workbox-core "^5.1.4"
 
 workbox-precaching@6.5.4:
   version "6.5.4"
@@ -15300,6 +15489,13 @@ workbox-precaching@6.5.4:
     workbox-core "6.5.4"
     workbox-routing "6.5.4"
     workbox-strategies "6.5.4"
+
+workbox-range-requests@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-range-requests/-/workbox-range-requests-5.1.4.tgz"
+  integrity sha512-1HSujLjgTeoxHrMR2muDW2dKdxqCGMc1KbeyGcmjZZAizJTFwu7CWLDmLv6O1ceWYrhfuLFJO+umYMddk2XMhw==
+  dependencies:
+    workbox-core "^5.1.4"
 
 workbox-range-requests@6.5.4:
   version "6.5.4"
@@ -15320,6 +15516,13 @@ workbox-recipes@6.5.4:
     workbox-routing "6.5.4"
     workbox-strategies "6.5.4"
 
+workbox-routing@^5.1.3, workbox-routing@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-routing/-/workbox-routing-5.1.4.tgz"
+  integrity sha512-8ljknRfqE1vEQtnMtzfksL+UXO822jJlHTIR7+BtJuxQ17+WPZfsHqvk1ynR/v0EHik4x2+826Hkwpgh4GKDCw==
+  dependencies:
+    workbox-core "^5.1.4"
+
 workbox-routing@6.5.4:
   version "6.5.4"
   resolved "https://registry.npmjs.org/workbox-routing/-/workbox-routing-6.5.4.tgz"
@@ -15327,12 +15530,28 @@ workbox-routing@6.5.4:
   dependencies:
     workbox-core "6.5.4"
 
+workbox-strategies@^5.1.3, workbox-strategies@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-strategies/-/workbox-strategies-5.1.4.tgz"
+  integrity sha512-VVS57LpaJTdjW3RgZvPwX0NlhNmscR7OQ9bP+N/34cYMDzXLyA6kqWffP6QKXSkca1OFo/v6v7hW7zrrguo6EA==
+  dependencies:
+    workbox-core "^5.1.4"
+    workbox-routing "^5.1.4"
+
 workbox-strategies@6.5.4:
   version "6.5.4"
   resolved "https://registry.npmjs.org/workbox-strategies/-/workbox-strategies-6.5.4.tgz"
   integrity sha512-DEtsxhx0LIYWkJBTQolRxG4EI0setTJkqR4m7r4YpBdxtWJH1Mbg01Cj8ZjNOO8etqfA3IZaOPHUxCs8cBsKLw==
   dependencies:
     workbox-core "6.5.4"
+
+workbox-streams@^5.1.3:
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/workbox-streams/-/workbox-streams-5.1.4.tgz"
+  integrity sha512-xU8yuF1hI/XcVhJUAfbQLa1guQUhdLMPQJkdT0kn6HP5CwiPOGiXnSFq80rAG4b1kJUChQQIGPrq439FQUNVrw==
+  dependencies:
+    workbox-core "^5.1.4"
+    workbox-routing "^5.1.4"
 
 workbox-streams@6.5.4:
   version "6.5.4"
